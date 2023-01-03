@@ -6,6 +6,10 @@ const router: RouteRecordRaw[] = [
     path: '/',
     component: Index,
   },
+  {
+    path: '/:id',
+    component: () => import('@/views/post/post.vue'),
+  },
 ]
 
 export default router

@@ -37,13 +37,18 @@ export default defineConfig({
         presetIcons(),
         presetTypography({
           cssExtend: {
-            a: {
-              'text-decoration': 'none',
-            },
+            // a: {
+            //   'text-decoration': 'none',
+            // },
           },
         }),
       ],
       transformers: [transformerDirective()],
+      theme: {
+        colors: {
+          main: 'var(--text-main)',
+        },
+      },
     }),
   ],
   resolve: {

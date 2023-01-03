@@ -1,8 +1,10 @@
 /* @import './font.css'; */
+@import './reset.css';
 :root {
   --c-bg: #ffffff;
   --c-scroll: #d9d9d9;
   --c-scroll-hover: #bbbbbb;
+  --text-main: #80b398;
   scrollbar-color: var(--c-scroll) var(--c-bg);
 }
 html {
