@@ -1,0 +1,20 @@
+/* @import './font.css'; */
+:root {
+  --c-bg: #ffffff;
+  --c-scroll: #d9d9d9;
+  --c-scroll-hover: #bbbbbb;
+  scrollbar-color: var(--c-scroll) var(--c-bg);
+}
+html {
+  background-color: var(--c-bg);
+  font-family: 'IBM Plex Sans', sans-serif !important;
+}
+
+@media(prefers-color-scheme: dark) {
+  :root {
+  --c-bg: #212121;
+  --c-scroll: #333333;
+  --c-scroll-hover: #555555;
+  color-scheme: dark;
+  }  
+}
