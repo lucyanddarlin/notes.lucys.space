@@ -43,3 +43,6 @@ a {
   color: inherit;
   text-decoration: inherit;
 }
+ul {
+  margin: 0;
+}

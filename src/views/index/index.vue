@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <main min-h-100vh>
     <Hero />
     <Post />
   </main>

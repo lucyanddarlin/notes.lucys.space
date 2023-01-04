@@ -11,7 +11,9 @@ declare module '@vue/runtime-core' {
     AppHeader: typeof import('./../components/app-header.vue')['default']
     Hero: typeof import('./../components/hero.vue')['default']
     Post: typeof import('./../components/post.vue')['default']
+    PostHeader: typeof import('./../views/post/components/post-header.vue')['default']
     PostItem: typeof import('./../components/post-item.vue')['default']
+    PostTitle: typeof import('../views/post/components/post-header.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }

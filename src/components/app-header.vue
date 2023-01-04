@@ -10,6 +10,7 @@
     items-center
     h-12
     border-b
+    border-solid
     backdrop-blur-xl
     backdrop-saturate-150
     class="border-black/5 bg-white/70"
