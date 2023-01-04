@@ -5,17 +5,19 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted } from 'vue'
+import { onMounted, onUnmounted } from 'vue'
 import { useRoute } from 'vue-router'
 import { storeToRefs } from 'pinia'
 import { usePostStore } from '@/stores/post'
 const route = useRoute()
-const { getPostById } = usePostStore()
+const { getPostById, cleanCurrentPost } = usePostStore()
 const { currentPost } = storeToRefs(usePostStore())
 onMounted(async () => {
-  console.log(route.query)
-
   await getPostById(route.query.id as string)
+})
+
+onUnmounted(() => {
+  cleanCurrentPost()
 })
 </script>
 

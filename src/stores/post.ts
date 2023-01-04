@@ -20,6 +20,9 @@ export const usePostStore = defineStore('post', () => {
     const { data } = await reqGetPostsById(id)
     currentPost.value = data
   }
+  const cleanCurrentPost = () => {
+    currentPost.value = undefined
+  }
 
-  return { postList, getALLPosts, getPostById, currentPost }
+  return { postList, getALLPosts, getPostById, currentPost, cleanCurrentPost }
 })
