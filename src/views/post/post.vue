@@ -1,5 +1,5 @@
 <template>
-  <div max-w-70ch mx-auto px-6 md:px-0>
+  <div max-w-70ch mx-auto px-6 md:px-0 min-h-full>
     <v-md-preview :text="currentPost?.attributes.content"></v-md-preview>
   </div>
 </template>

@@ -18,7 +18,7 @@ interface newAxiosInstance extends AxiosInstance {
 }
 
 const http: newAxiosInstance = axios.create({
-  baseURL: 'http://120.76.41.66/api',
+  baseURL: 'https://www.wanjiacloud.top/api',
   timeout: 3 * 1000,
   // withCredentials: true,
 })

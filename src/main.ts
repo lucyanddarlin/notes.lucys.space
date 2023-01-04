@@ -9,7 +9,7 @@ import VMdPreview from '@kangc/v-md-editor/lib/preview'
 import '@kangc/v-md-editor/lib/style/preview.css'
 import vuepressTheme from '@kangc/v-md-editor/lib/theme/vuepress.js'
 import '@kangc/v-md-editor/lib/theme/style/vuepress.css'
-import createMermaidPlugin from '@kangc/v-md-editor/lib/plugins/mermaid/cdn'
+// import createMermaidPlugin from '@kangc/v-md-editor/lib/plugins/mermaid/cdn'
 import createLineNumbertPlugin from '@kangc/v-md-editor/lib/plugins/line-number/index'
 import createCopyCodePlugin from '@kangc/v-md-editor/lib/plugins/copy-code/index'
 import '@kangc/v-md-editor/lib/plugins/copy-code/copy-code.css'
@@ -26,7 +26,7 @@ VMdPreview.use(vuepressTheme, {
   Prism,
 })
 // markdown支持流程图
-VMdPreview.use(createMermaidPlugin())
+// VMdPreview.use(createMermaidPlugin())
 // markdown支持显示代码行数
 VMdPreview.use(createLineNumbertPlugin())
 // markdown支持代码快速复制
