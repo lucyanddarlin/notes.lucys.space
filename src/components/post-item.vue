@@ -1,5 +1,5 @@
 <template>
-  <a :href="'' + post.id">
+  <a :href="'/post?id=' + post.id">
     <div v-if="post.categories.data.length > 0" flex>
       <div
         v-for="cate in post.categories.data"

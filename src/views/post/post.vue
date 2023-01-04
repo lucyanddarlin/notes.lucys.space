@@ -13,7 +13,9 @@ const route = useRoute()
 const { getPostById } = usePostStore()
 const { currentPost } = storeToRefs(usePostStore())
 onMounted(async () => {
-  await getPostById(route.params.id as string)
+  console.log(route.query)
+
+  await getPostById(route.query.id as string)
 })
 </script>
 
