@@ -1,4 +1,5 @@
 import Index from '@/views/index/index.vue'
+import Post from '@/views/post/post.vue'
 import type { RouteRecordRaw } from 'vue-router'
 
 const router: RouteRecordRaw[] = [
@@ -8,7 +9,7 @@ const router: RouteRecordRaw[] = [
   },
   {
     path: '/:id',
-    component: () => import('@/views/post/post.vue'),
+    component: Post,
   },
 ]
 
