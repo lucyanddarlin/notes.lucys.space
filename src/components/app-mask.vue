@@ -1,5 +1,14 @@
 <template>
-  <div fixed top-12 left-0 right-0 bottom-0 sm:hidden z-9>
+  <div
+    fixed
+    top-12
+    left-0
+    right-0
+    bottom-0
+    sm:hidden
+    class="-z-1"
+    :class="{ 'z-9': showMenu }"
+  >
     <div
       relative
       px-6
@@ -29,7 +38,7 @@
       opacity-0
       absolute
       inset-0
-      transition-all
+      transition-opacity
       class="bg-black/20"
       :class="{ 'opacity-100': showMenu }"
       @click="closeMenu"
