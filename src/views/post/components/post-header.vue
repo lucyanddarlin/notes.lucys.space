@@ -1,5 +1,5 @@
 <template>
-  <header px-2rem py-6 md:pt-12>
+  <header ref="postHeader" px-2rem py-6 md:pt-12>
     <div pt-4 md:pt-6>
       <h1
         text-2rem
@@ -29,7 +29,17 @@
 
 <script setup lang="ts">
 import { format } from 'date-fns'
+import { storeToRefs } from 'pinia'
+import { nextTick, onMounted, ref } from 'vue'
+import { usePostStore } from '@/stores/post'
 defineProps<{ title?: string; desc?: string; createAt?: number }>()
+const postHeader = ref<HTMLElement>()
+const { postHeaderHeightValue } = storeToRefs(usePostStore())
+onMounted(async () => {
+  await nextTick()
+  postHeaderHeightValue.value = postHeader.value?.clientHeight
+  console.log('dom height', postHeaderHeightValue.value)
+})
 </script>
 
 <style scoped></style>

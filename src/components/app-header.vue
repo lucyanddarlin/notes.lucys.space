@@ -15,13 +15,33 @@
     backdrop-saturate-150
     class="border-black/5 bg-white/70"
   >
-    <div>
+    <div :class="{ 'hidden sm:!block': showTitle }">
       <a href="https://notes.lucys.space/">
         <span hover:text-main font-medium text-sm>Lucy.notes</span>
       </a>
     </div>
+    <div
+      mt-0.6
+      mr-2
+      opacity-0
+      transition-all
+      duration-300
+      class="text-black/50 text-xs font-medium -translate-x-4"
+      :class="{ 'opacity-100 translate-x-4': showTitle }"
+    >
+      <span>{{ postTitle }}</span>
+    </div>
     <div flex-1></div>
-    <div sm:hidden>phone</div>
+    <div sm:hidden>
+      <div
+        text-xl
+        transition-transform
+        duration-400
+        class="i-ri-menu-unfold-line"
+        :class="{ 'rotate-90': showMenu }"
+        @click="handleControlMenu"
+      />
+    </div>
     <div hidden sm:block>
       <ul flex flex-col sm:flex-row font-medium>
         <p
@@ -42,20 +62,14 @@
 </template>
 
 <script setup lang="ts">
-import type { IHeaderItem } from '@/typings'
+import { storeToRefs } from 'pinia'
+import { usePostStore } from '@/stores/post'
 
-const buttonList: IHeaderItem[] = [
-  {
-    name: 'Portfolio',
-    url: 'https://lucys.space/',
-    id: 0,
-  },
-  {
-    name: 'Posts',
-    url: 'https://notes.lucys.space/',
-    id: 0,
-  },
-]
+const { showMenu, buttonList } = storeToRefs(usePostStore())
+const handleControlMenu = () => {
+  showMenu.value = !showMenu.value
+}
+const { showTitle, postTitle } = storeToRefs(usePostStore())
 </script>
 
 <style scoped></style>

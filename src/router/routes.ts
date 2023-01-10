@@ -8,7 +8,7 @@ const router: RouteRecordRaw[] = [
     component: Index,
   },
   {
-    path: '/post',
+    path: '/:id',
     component: Post,
   },
 ]

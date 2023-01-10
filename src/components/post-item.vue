@@ -1,5 +1,5 @@
 <template>
-  <RouterLink :to="{ path: '/post', query: { id: post.id } }">
+  <RouterLink :to="{ path: `/${post.id}` }">
     <div v-if="post.categories.data.length > 0" flex>
       <div
         v-for="cate in post.categories.data"
