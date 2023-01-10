@@ -38,7 +38,6 @@
       opacity-0
       absolute
       inset-0
-      transition-opacity
       class="bg-black/20"
       :class="{ 'opacity-100': showMenu }"
       @click="closeMenu"

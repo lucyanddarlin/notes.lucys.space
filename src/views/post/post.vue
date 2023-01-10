@@ -8,7 +8,6 @@
         :create-at="new Date(currentPost?.attributes.createdAt!).getTime()"
       />
     </div>
-
     <v-md-preview :text="currentPost?.attributes.content"></v-md-preview>
   </div>
 </template>
@@ -27,7 +26,6 @@ const scrollValue = ref()
 
 getPostById(route.params.id as string)
 const watchScroll = () => {
-  console.log(postHeaderHeightValue.value)
   scrollValue.value =
     document.documentElement.scrollTop || document.body.scrollTop
   if (scrollValue.value >= postHeaderHeightValue.value) {

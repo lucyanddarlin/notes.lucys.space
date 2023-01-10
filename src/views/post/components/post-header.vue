@@ -38,7 +38,6 @@ const { postHeaderHeightValue } = storeToRefs(usePostStore())
 onMounted(async () => {
   await nextTick()
   postHeaderHeightValue.value = postHeader.value?.clientHeight
-  console.log('dom height', postHeaderHeightValue.value)
 })
 </script>
 
