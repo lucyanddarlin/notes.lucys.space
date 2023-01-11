@@ -1,6 +1,6 @@
 <template>
-  <div max-w-70ch mx-auto px-6 md:px-0 min-h-100vh>
-    <div ref="postHeader">
+  <div max-w-100ch mx-auto px-6 md:px-0 min-h-100vh>
+    <div>
       <PostHeader
         v-if="currentPost"
         :title="currentPost?.attributes.title"
