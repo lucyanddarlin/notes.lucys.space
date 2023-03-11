@@ -15,6 +15,8 @@ import createCopyCodePlugin from '@kangc/v-md-editor/lib/plugins/copy-code/index
 import '@kangc/v-md-editor/lib/plugins/copy-code/copy-code.css'
 import createEmojiPlugin from '@kangc/v-md-editor/lib/plugins/emoji/index'
 import '@kangc/v-md-editor/lib/plugins/emoji/emoji.css'
+import createMermaidPlugin from '@kangc/v-md-editor/lib/plugins/mermaid/cdn'
+import '@kangc/v-md-editor/lib/plugins/mermaid/mermaid.css'
 
 // Prism
 import Prism from 'prismjs'
@@ -33,6 +35,7 @@ VMdPreview.use(createLineNumbertPlugin())
 VMdPreview.use(createCopyCodePlugin())
 // markdown支持emoji
 VMdPreview.use(createEmojiPlugin())
+VMdPreview.use(createMermaidPlugin())
 const app = createApp(App)
 
 app.use(createPinia())
