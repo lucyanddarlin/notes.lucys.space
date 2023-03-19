@@ -1,5 +1,6 @@
 <template>
   <header
+    ref="appHeader"
     fixed
     left-0
     right-0
@@ -28,6 +29,9 @@
       duration-300
       class="text-black/50 text-xs font-medium -translate-x-4"
       :class="{ 'opacity-100 translate-x-4': showTitle }"
+      cursor-pointer
+      select-none
+      @click="handleBackToTop"
     >
       <span>{{ postTitle }}</span>
     </div>
@@ -63,6 +67,7 @@
 
 <script setup lang="ts">
 import { storeToRefs } from 'pinia'
+// import { nextTick, onMounted, ref } from 'vue'
 import { usePostStore } from '@/stores/post'
 
 const { showMenu, buttonList } = storeToRefs(usePostStore())
@@ -70,6 +75,14 @@ const handleControlMenu = () => {
   showMenu.value = !showMenu.value
 }
 const { showTitle, postTitle } = storeToRefs(usePostStore())
+const handleBackToTop = () => {
+  document.documentElement.scrollTop = 0
+}
+// const appHeader = ref<HTMLElement>()
+// onMounted(async () => {
+//   await nextTick()
+//   console.log(appHeader.value?.clientHeight)
+// })
 </script>
 
 <style scoped></style>

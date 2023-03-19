@@ -49,6 +49,13 @@ export default defineConfig({
           main: 'var(--text-main)',
         },
       },
+      shortcuts: [
+        [
+          /^anchor-title-(.*)$/,
+          ([, c]) => `text-${16 - Number(c)}px pl-${Number(c) * 10}px`,
+        ],
+      ],
+      safelist: [...Array.from({ length: 6 }, (_, i) => `anchor-title-${i}`)],
     }),
   ],
   resolve: {

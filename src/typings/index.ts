@@ -48,3 +48,9 @@ export interface IMeta {
     total: number
   }
 }
+
+export interface IAnchor {
+  title: string
+  lineIndex: number
+  indent: string
+}
