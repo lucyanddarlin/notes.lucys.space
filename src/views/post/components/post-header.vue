@@ -12,7 +12,7 @@
       >
         {{ title }}
       </h1>
-      <p class="text-black/40 mb-6">{{ desc }}</p>
+      <p class="text-black/40 mb-6 text-justify">{{ desc }}</p>
       <div class="text-black/80">
         <section flex items-center text-sm gap-3>
           <div inline-flex items-center>

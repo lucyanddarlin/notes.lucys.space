@@ -14,7 +14,7 @@
             :create-at="new Date(currentPost?.attributes.createdAt!).getTime()"
           />
         </div>
-        <div>
+        <div text-justify>
           <v-md-preview
             ref="preview"
             :text="currentPost?.attributes.content"
