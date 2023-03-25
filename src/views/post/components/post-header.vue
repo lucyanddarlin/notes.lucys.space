@@ -1,5 +1,5 @@
 <template>
-  <header ref="postHeader" px-2rem py-6 md:pt-12>
+  <header ref="postHeader" px-1.5rem py-6 md:pt-12 sm:px-2rem>
     <div pt-4 md:pt-6>
       <h1
         text-2rem

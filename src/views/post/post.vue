@@ -5,7 +5,7 @@
       @click-anchor="handleClickAnchor"
     />
     <div h-full max-w-110ch mx-auto class="lg:pl-70">
-      <div class="px-6 md:px-0">
+      <div class="px-3 md:px-0">
         <div>
           <PostHeader
             v-if="currentPost"
